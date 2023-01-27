@@ -1,0 +1,21 @@
+<form [formGroup]="formulario" (ngSubmit)="addPlace()" class="mb-5 mt-5 px-3.5 grid grid-flow-row auto-rows-min">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput       class="form-control"
+    cols="30"
+    rows="5"
+    formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Image url</mat-label>
+    <input matInput type="text" formControlName="image">
+  </mat-form-field>
+
+  <input type="submit" [disabled]="formulario.invalid" value="Save place" class="bg-green-500 py-3 px-5 rounded-md font-bold font-semibold text-lgm hover:bg-green-600"/>
+</form>

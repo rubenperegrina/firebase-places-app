@@ -1,0 +1,12 @@
+<div *ngFor="let place of places" class="px-3.5">
+  <a href="#" class="mb-4 flex flex-col items-center bg-white border border-sky-900 rounded-2xl shadow md:flex-row md:max-w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img ngSrc="{{place.image}}" height="100" width="100" alt="{{place.name}}" class="object-cover w-full rounded-t-lg h-96 md:w-5/12 md:rounded-none md:rounded-l-lg">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{place.name}}</h5>
+      <p class="mb-3 font-semibold text-gray-700 dark:text-gray-400">{{place.description}}</p>
+      <div class="flex mt-4 space-x-3 md:mt-6">
+        <button (click)="deletePlace(place.id)" class="bg-red-500 py-3 px-5 rounded-md font-bold font-semibold text-lgm hover:bg-red-600">Delete place</button>
+    </div>
+    </div>
+  </a>
+</div>
